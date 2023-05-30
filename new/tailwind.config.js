@@ -6,10 +6,18 @@ module.exports = {
     "./index.html",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+    },
     extend: {
       colors: {
-        'background': 'rgb(241,244,248)',
+        'blue': 'rgb(45,170,255)',
+        'black': 'rgb(39,39,39)',
+        'white': 'rgb(241,244,248)',
       },
+      padding: {
+        'fit': '15%',
+      }
     },
   },
   plugins: [],
