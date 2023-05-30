@@ -9,7 +9,7 @@ export const contacts = {
     },
     'address': {
         name: 'Adres',
-        link: 'Bielsko-biała, Polska',
+        link: 'Bielsko-Biała, Polska',
     },
 }
 
@@ -25,7 +25,7 @@ export const routes = [
     {
         name: 'Kontakt',
         link: '/kontakt',
-    }
+    },
 ];
 
 export const socials = [

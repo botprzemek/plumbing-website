@@ -17,6 +17,7 @@ module.exports = {
       },
       padding: {
         'fit': '15%',
+        'phone': '5%',
       }
     },
   },
