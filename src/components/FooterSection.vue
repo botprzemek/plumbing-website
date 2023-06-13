@@ -9,7 +9,7 @@ import {contacts,routes,socials} from '@/data';
       <p class="text-white text-sm text-center sm:text-left sm:text-base flex flex-col sm:flex-row break-all gap-1">
         <span>
           Wykonanie
-          <a href="https://botprzemek.pl/" target="_blank" class="font-semibold">botprzemek.pl</a>
+          <a href="https://botprzemek.pl/" target="_blank" class="font-semibold hover:text-blue transition-colors duration-200 ease-in">botprzemek.pl</a>
         </span>
         <span>Wszelkie prawa zastrzeżone</span>
       </p>
@@ -21,7 +21,7 @@ import {contacts,routes,socials} from '@/data';
           <ul>
             <li v-for="social in socials" :key="social.name">
               <a :href="social.link" target="_blank">
-                <p class="text-sm sm:text-base text-white">{{ social.name }}</p>
+                <p class="text-sm sm:text-base text-white hover:text-blue transition-colors duration-200 ease-in">{{ social.name }}</p>
               </a>
             </li>
           </ul>
@@ -31,17 +31,17 @@ import {contacts,routes,socials} from '@/data';
           <ul>
             <li>
               <a :href="`tel:${contacts.phone.link}`">
-                <p class="text-sm sm:text-base text-white">{{ contacts.phone.link }}</p>
+                <p class="text-sm sm:text-base text-white hover:text-blue transition-colors duration-200 ease-in">{{ contacts.phone.link }}</p>
               </a>
             </li>
             <li>
               <a :href="`mailto:${contacts.email.link}`">
-                <p class="text-sm sm:text-base text-white">{{ contacts.email.link }}</p>
+                <p class="text-sm sm:text-base text-white hover:text-blue transition-colors duration-200 ease-in">{{ contacts.email.link }}</p>
               </a>
             </li>
             <li>
               <a :href="`https://www.google.com/maps/place/${contacts.address.link}`" target="_blank">
-                <p class="text-sm sm:text-base text-white">{{ contacts.address.link }}</p>
+                <p class="text-sm sm:text-base text-white hover:text-blue transition-colors duration-200 ease-in">{{ contacts.address.link }}</p>
               </a>
             </li>
           </ul>
@@ -53,7 +53,7 @@ import {contacts,routes,socials} from '@/data';
           <ul class="grid grid-flow-col sm:grid-flow-row w-full sm:w-fit gap-2 sm:gap-0">
             <li v-for="route in routes" :key="route.name">
               <RouterLink :to="route.link">
-                <p class="text-md sm:text-md text-blue sm:text-white text-center sm:text-left bg-white sm:bg-transparent rounded-full sm:rounded-none py-1.5 sm:py-0">{{ route.name }}</p>
+                <p class="text-md sm:text-md text-blue sm:text-white text-center sm:text-left bg-white sm:bg-transparent rounded-full sm:rounded-none py-1.5 sm:py-0 hover:text-blue transition-colors duration-200 ease-in">{{ route.name }}</p>
               </RouterLink>
             </li>
           </ul>

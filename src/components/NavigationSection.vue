@@ -7,7 +7,7 @@ import {contacts, routes} from '@/data';
     <RouterLink to="/" class="flex flex-row items-center gap-4">
       <img src="@/assets/logo_menu.webp" class="py-2 h-full"/>
       <section>
-        <h6 class="text-black font-semibold text-2xl">Pan od Rurek</h6>
+        <h6 class="text-black font-semibold text-2xl hover:text-blue transition-colors duration-200 ease-in">Pan od Rurek</h6>
         <a :href="`tel:${contacts.phone.link}`" class="text-sm sm:text-base text-black">
           <p>Zadzwoń do nas!</p>
         </a>
