@@ -7,7 +7,7 @@ import FooterSection from '@/components/FooterSection.vue';
 
 <template>
   <NavigationSection/>
-  <main class="relative z-10 select-none px-phone sm:px-fit grid box-contents place-content-center scroll-smooth m-auto">
+  <main class="relative z-10 select-none grid box-contents place-content-center scroll-smooth sm:pt-20 m-auto">
     <RouterView />
   </main>
   <FooterSection/>

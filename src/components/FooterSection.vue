@@ -17,7 +17,7 @@ import {contacts,routes,socials} from '@/data';
     <section class="flex flex-col sm:flex-row gap-4 sm:gap-12">
       <section class="grid grid-cols-2 sm:flex sm:flex-row gap-4 w-full sm:w-fit sm:gap-12 pt-4 sm:pt-0">
         <section>
-          <h5 class="text-white font-semibold text-md sm:text-lg">Sociale</h5>
+          <h5 class="text-white font-semibold text-base sm:text-lg">Sociale</h5>
           <ul>
             <li v-for="social in socials" :key="social.name">
               <a :href="social.link" target="_blank">
@@ -27,7 +27,7 @@ import {contacts,routes,socials} from '@/data';
           </ul>
         </section>
         <section>
-          <h5 class="text-white font-semibold text-md sm:text-lg">Kontakt</h5>
+          <h5 class="text-white font-semibold text-base sm:text-lg">Kontakt</h5>
           <ul>
             <li>
               <a :href="`tel:${contacts.phone.link}`">
@@ -53,7 +53,7 @@ import {contacts,routes,socials} from '@/data';
           <ul class="grid grid-flow-col sm:grid-flow-row w-full sm:w-fit gap-2 sm:gap-0">
             <li v-for="route in routes" :key="route.name">
               <RouterLink :to="route.link">
-                <p class="text-md sm:text-md text-blue sm:text-white text-center sm:text-left bg-white sm:bg-transparent rounded-full sm:rounded-none py-1.5 sm:py-0 hover:text-blue transition-colors duration-200 ease-in">{{ route.name }}</p>
+                <p class="text-base sm:text-base text-blue sm:text-white text-center sm:text-left bg-white sm:bg-transparent rounded-full sm:rounded-none py-1.5 sm:py-0 hover:text-blue transition-colors duration-200 ease-in">{{ route.name }}</p>
               </RouterLink>
             </li>
           </ul>
