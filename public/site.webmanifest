@@ -1,0 +1,12 @@
+{
+    "name":"Pan od Rurek",
+    "short_name":"panodrurek",
+    "icons": [
+        {"src":"favicon/maskable-icon-192x192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+        {"src":"favicon/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
+        {"src":"favicon/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],
+    "theme_color":"#3369ff",
+    "background_color":"#ffffff",
+    "display":"standalone",
+    "start_url": "/"
+}

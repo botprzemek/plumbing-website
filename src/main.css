@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .udr-anim {
+        display: inline-block;
+        position: relative;
+    }
+
+    .udr-anim:after {
+        content: '';
+        position: absolute;
+        width: theme('width[full]');
+        transform: scaleX(0);
+        height: theme('height[0.5]');
+        border-radius: theme('borderRadius[full]');
+        bottom: -3px;
+        left: 0;
+        background-color: theme('colors[blue]');
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .udr-anim:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}

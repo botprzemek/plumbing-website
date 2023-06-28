@@ -42,3 +42,9 @@ export const socials = [
         link: 'https://www.instagram.com/pan_od_rurek/',
     },
 ]
+
+export const clientAmount = 5341;
+
+export const certificates = ['saunier', 'osfis', 'vaillant'];
+
+export const photos = ['montaż_pomp_ciepła', 'montaż_kotłów', 'montaż_ogrzewania'];
