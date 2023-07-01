@@ -1,6 +1,6 @@
 <script>
 import {certificates, photos, clientAmount} from '@/data';
-import {mobileCheck} from '@/methods';
+import {mobileCheck, observer} from '@/methods';
 
 export default {
   name: 'HomeView',
@@ -22,6 +22,7 @@ export default {
     }
   },
   mounted() {
+    setTimeout(async () => document.querySelectorAll('.content').forEach(element => observer.observe(element)));
     setInterval(() => {
       if (this.counter !== clientAmount) this.counter++;
     }, 0);
@@ -46,7 +47,7 @@ export default {
       </button>
     </section>
   </section>
-  <section v-else class="flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit">
+  <section v-else class="flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all">
     <section class="grid place-items-center w-full h-full">
       <section class="aspect-auto w-full h-full">
         <iframe title="Film Youtube" src="https://www.youtube.com/embed/qhkCIk3yJvE" frameborder="0" class="aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl"></iframe>
@@ -69,7 +70,7 @@ export default {
       </section>
     </section>
   </section>
-  <section class="grid py-8 sm:py-16 px-phone sm:px-fit bg-blue">
+  <section class="grid py-8 sm:py-16 px-phone sm:px-fit bg-blue content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all">
     <section class="flex flex-col gap-4 items-center">
       <h2 @click="window.scrollTo({top: 0, left: 0, behavior: `smooth`})" class="text-white font-semibold text-2xl sm:text-6xl text-center sm:text-left leading-relaxed sm:leading-none sm:mb-4">
         Zaufały nam
@@ -84,7 +85,7 @@ export default {
       </p>
     </section>
   </section>
-  <section class="grid py-8 sm:py-16 px-phone sm:px-fit">
+  <section class="grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all">
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <h2 class="text-black font-semibold text-2xl sm:text-6xl text-left">Nasza oferta</h2>
       <p class="text-black text-base sm:text-lg">
@@ -105,7 +106,7 @@ export default {
       </section>
     </section>
   </section>
-  <section class="grid py-8 sm:py-16 px-phone sm:px-fit bg-blue">
+  <section class="grid py-8 sm:py-16 px-phone sm:px-fit bg-blue content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all">
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <h2 class="text-white font-semibold text-2xl sm:text-6xl text-left">Certyfikaty</h2>
       <p class="text-white text-base sm:text-lg">
@@ -123,7 +124,7 @@ export default {
       </section>
     </section>
   </section>
-  <section class="grid py-8 sm:py-16 px-phone sm:px-fit">
+  <section class="grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all">
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <section class="grid sm:grid-cols-[2fr,1fr] sm:gap-12">
         <section v-if="!mobile" class="relative aspect-video sm:aspect-auto sm:w-full sm:h-full">

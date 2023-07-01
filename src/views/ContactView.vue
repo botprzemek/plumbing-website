@@ -1,6 +1,6 @@
 <script>
-import {certificates, photos, clientAmount} from '@/data';
-import {mobileCheck,observer} from '@/methods';
+import {certificates, photos} from '@/data';
+import {mobileCheck, observer} from '@/methods';
 
 export default {
   name: 'ContactView',
@@ -17,13 +17,11 @@ export default {
   },
   data() {
     return {
-      counter: Math.floor(clientAmount/1000)*1000,
       mobile: mobileCheck(),
     }
   },
   mounted() {
     setTimeout(async () => document.querySelectorAll('.content').forEach(element => observer.observe(element)));
-    setInterval(() => { if (this.counter !== clientAmount) this.counter++ }, 0);
   },
 }
 </script>
@@ -45,7 +43,7 @@ export default {
       </button>
     </section>
   </section>
-  <section v-else class="content flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all">
+  <section v-else class="flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all">
     <section class="grid place-items-center w-full h-full">
       <section class="aspect-auto w-full h-full">
         <iframe title="Film Youtube" src="https://www.youtube.com/embed/qhkCIk3yJvE" frameborder="0" class="aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl"></iframe>
