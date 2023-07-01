@@ -75,7 +75,9 @@ export default {
       <h2 @click="window.scrollTo({top: 0, left: 0, behavior: `smooth`})" class="text-white font-semibold text-2xl sm:text-6xl text-center sm:text-left leading-relaxed sm:leading-none sm:mb-4">
         Zaufały nam
         <br v-if="mobile">
-        <span class="bg-white rounded-full text-blue px-8">{{ counter }}</span>
+        <span class="bg-white rounded-full text-blue px-8">
+          {{ counter }}
+        </span>
         osoby
       </h2>
       <p class="text-white text-base sm:text-lg text-center">

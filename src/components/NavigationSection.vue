@@ -1,21 +1,58 @@
-<script setup>
+<script>
 import {contacts, routes, clientAmount} from '@/data';
 import {scrollTo, mobileCheck} from '@/methods';
-import IconPhone from '@/components/icons/IconPhone.vue';
-let path = window.location.pathname;
-let mobile = mobileCheck();
+import CheckIcon from '@/components/icons/CheckIcon.vue';
+import PhoneIcon from '@/components/icons/PhoneIcon.vue';
+import TimeIcon from '@/components/icons/TimeIcon.vue';
+import UserIcon from '@/components/icons/UserIcon.vue';
+
+export default {
+  name: 'NavigationSection',
+  components: {
+    CheckIcon,
+    PhoneIcon,
+    TimeIcon,
+    UserIcon,
+  },
+  methods: {
+    scrollTo(element) {
+      scrollTo(element);
+    },
+    contacts() {
+      return contacts;
+    },
+    routes() {
+      return routes;
+    },
+    clientAmount() {
+      return clientAmount;
+    },
+  },
+  data() {
+    return {
+      path: window.location.pathname,
+      mobile: mobileCheck(),
+    }
+  },
+  mounted() {
+    this.$watch( () => this.$route.path,(to) => this.path = to);
+  },
+}
 </script>
 
 <template>
   <header class="header z-40 w-full select-none h-fit bg-blue text-sm px-phone sm:px-fit" tabindex="-1">
     <ul v-if="!mobile" class="h-full flex flex-row justify-between items-center my-3">
-      <li>
+      <li class="flex gap-2">
+        <CheckIcon/>
         <p class="text-white">Profesjonalne instalacje i montaż</p>
       </li>
-      <li>
+      <li class="flex gap-2">
+        <UserIcon/>
         <p class="text-white">Ponad {{ clientAmount }} zadowolonych klientów</p>
       </li>
-      <li>
+      <li class="flex gap-2">
+        <TimeIcon/>
         <p class="text-white">+10 lat doświadczenia</p>
       </li>
     </ul>
@@ -49,7 +86,7 @@ let mobile = mobileCheck();
         <button class="px-6 py-1.5 bg-blue h-fit w-fit rounded-full text-white hover:scale-105 transition-transform duration-300 ease-in-out">
           <a :href="`tel:${contacts.phone.link}`" class="text-base sm:text-base grid grid-flow-col gap-2 place-items-center" tabindex="-1">
             <span class="text-white">Zadzwoń teraz!</span>
-            <IconPhone/>
+            <PhoneIcon/>
           </a>
         </button>
       </li>
