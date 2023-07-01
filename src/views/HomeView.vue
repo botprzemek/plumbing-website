@@ -3,6 +3,7 @@ import {certificates, photos, clientAmount} from '@/data';
 import {mobileCheck} from '@/methods';
 
 export default {
+  name: 'HomeView',
   methods: {
     photos() {
       return photos;
@@ -16,7 +17,7 @@ export default {
   },
   data() {
     return {
-      counter: 5000,
+      counter: Math.floor(clientAmount/1000)*1000,
       mobile: mobileCheck(),
     }
   },
@@ -45,7 +46,7 @@ export default {
       </button>
     </section>
   </section>
-  <section v-else class="flex flex-col sm:grid sm:grid-cols-[2fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit">
+  <section v-else class="flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit">
     <section class="grid place-items-center w-full h-full">
       <section class="aspect-auto w-full h-full">
         <iframe title="Film Youtube" src="https://www.youtube.com/embed/qhkCIk3yJvE" frameborder="0" class="aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl"></iframe>
@@ -81,11 +82,6 @@ export default {
         Firma została stworzona by realizować marzenia ludzi,
         posiadamy wieloletnie doświadczenie w budowie.
       </p>
-      <button class="px-8 py-1 bg-white h-fit w-fit rounded-full border-2 border-white text-black hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out">
-        <RouterLink to="/uslugi" tabindex="-1">
-          <p class="text-base">Kilka słów o nas</p>
-        </RouterLink>
-      </button>
     </section>
   </section>
   <section class="grid py-8 sm:py-16 px-phone sm:px-fit">
@@ -118,7 +114,7 @@ export default {
         oraz certyfikowani do użytku urządzeń firmy Vaillant oraz Saunier.
       </p>
       <section class="relative grid grid-rows-3 sm:grid-rows-none sm:grid-cols-3 gap-4 sm:gap-4 w-full h-phone sm:h-64">
-        <a v-for="certificate in certificates()" :key="certificate" :href="getImageUrl(certificate)" target="_blank" class="relative w-full h-full rounded-2xl overflow-hidden group">
+        <a v-for="certificate in Object.keys(certificates())" :key="certificate" :href="certificates()[certificate].link" target="_blank" class="relative w-full h-full rounded-2xl overflow-hidden group">
           <img :src="getImageUrl(`images/${certificate}.jpg`)" :alt="`Certyfikat firmy ${certificate.charAt(0).toUpperCase() + certificate.slice(1)}`" class="object-cover absolute w-full h-full group-hover:scale-110 hover:cursor-pointer transition-transform duration-300 ease-in-out">
           <section class="relative bg-white flex flex-col-reverse py-3 w-full shadow-md">
             <p class="text-black font-semibold text-xl text-center">{{ certificate.charAt(0).toUpperCase() + certificate.slice(1) }}</p>

@@ -10,22 +10,22 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/o-nas',
-      name: 'O nas',
-      meta: {title: 'O nas'},
-      component: () => import('../views/HomeView.vue')
+      path: '/galeria',
+      name: 'Galeria',
+      meta: { title: 'Galeria' },
+      component: () => import('../views/GalleryView.vue')
     },
     {
       path: '/uslugi',
-      name: 'Usługi hydrauliczne',
-      meta: {title: 'Usługi hydrauliczne'},
-      component: () => import('../views/HomeView.vue')
+      name: 'Usługi',
+      meta: { title: 'Usługi' },
+      component: () => import('../views/ServicesView.vue')
     },
     {
       path: '/kontakt',
       name: 'Kontakt',
-      meta: {title: 'Kontakt'},
-      component: () => import('../views/HomeView.vue')
+      meta: { title: 'Kontakt' },
+      component: () => import('../views/ContactView.vue')
     },
     {
       path: '/:catchAll(.*)', redirect: '/'
@@ -34,7 +34,7 @@ const router = createRouter({
 })
 
 router.beforeEach(to => {
-  window.document.title = to.meta.title ? to.meta.title + ' | Pan od Rurek' : 'Usługi hydrauliczne | Pan od Rurek';
+  window.document.title = to.meta.title ? to.meta.title + ' | Pan od Rurek' : 'Strona główna | Pan od Rurek';
 });
 
 export default router

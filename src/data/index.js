@@ -15,12 +15,12 @@ export const contacts = {
 
 export const routes = [
     {
-        name: 'O nas',
-        link: '/o-nas',
-    },
-    {
         name: 'Usługi',
         link: '/uslugi',
+    },
+    {
+        name: 'Galeria',
+        link: '/galeria',
     },
     {
         name: 'Kontakt',
@@ -45,6 +45,16 @@ export const socials = [
 
 export const clientAmount = 5341;
 
-export const certificates = ['saunier', 'osfis', 'vaillant'];
+export const certificates = {
+    'saunier': {
+        link: 'https://www.saunierduval.pl/',
+    },
+    'osfis': {
+        link: 'https://www.osfis.pl/',
+    },
+    'vaillant': {
+        link: 'https://www.vaillant.pl/',
+    }
+};
 
 export const photos = ['montaż_pomp_ciepła', 'montaż_kotłów', 'montaż_ogrzewania'];
