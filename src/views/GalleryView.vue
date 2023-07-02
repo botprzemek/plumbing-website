@@ -34,7 +34,7 @@ export default {
       </p>
       <section class="grid grid-cols-2 sm:grid-cols-2 sm:grid-rows-2 gap-4 w-full h-fit">
         <section @click="scrollInto(photo)" v-for="(photo, index) in photos()" :key="photo" :class="`relative flex flex-col-reverse w-full h-48 rounded-2xl overflow-hidden group hover:cursor-pointer`">
-          <img :src="getImageUrl(`images/photo_${index + 1}.jpg`)" :alt="photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1)" loading="lazy" class="object-cover absolute w-full h-full group-hover:scale-110 transition-transform duration-300 ease-in-out">
+          <img :src="getImageUrl(`images/photo_${index + 1}.webp`)" :alt="photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1)" loading="lazy" class="object-cover absolute w-full h-full group-hover:scale-110 transition-transform duration-300 ease-in-out">
           <section class="relative bg-blue pb-4 pt-4 px-4 w-full">
             <p class="text-white sm:font-semibold text-base sm:text-xl">{{ photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1) }}</p>
             <hr class="my-2 border-1">

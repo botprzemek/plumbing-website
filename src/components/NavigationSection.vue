@@ -59,13 +59,13 @@ export default {
   </header>
   <nav v-if="!mobile" class="sticky top-0 z-30 px-phone sm:px-fit flex flex-row justify-center sm:justify-between h-16 bg-white shadow-sm">
     <RouterLink v-if="path !== '/'" to="/" class="flex flex-row items-center gap-4 group">
-      <img src="../assets/images/logo.webp" class="py-2 h-full" alt="Logo Pan od Rurek"/>
+      <img src="../assets/images/logo.webp" class="py-2 h-full w-fit" alt="Logo Pan od Rurek"/>
       <section>
         <span class="text-black font-semibold text-2xl group-hover:text-blue transition-colors duration-200 ease-in">Pan od Rurek</span>
       </section>
     </RouterLink>
     <button v-else @click="scrollTo('header')"  class="flex flex-row items-center gap-4">
-      <img src="../assets/images/logo.webp" class="py-2 h-full" alt="Logo Pan od Rurek"/>
+      <img src="../assets/images/logo.webp" class="py-2 h-full w-fit" alt="Logo Pan od Rurek"/>
       <span class="text-black font-semibold text-2xl hover:text-blue transition-colors duration-200 ease-in">Pan od Rurek</span>
     </button>
     <ul class="hidden sm:flex flex-row gap-4 items-center">
