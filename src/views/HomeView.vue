@@ -36,7 +36,7 @@ export default {
   <section v-if="mobile" class="relative w-full h-fit flex flex-col place-content-between items-center">
     <aside class="absolute z-20 w-full h-full bg-gradient-to-b from-black/60 to-black/0 bg-cover"></aside>
     <aside class="absolute z-10 w-full h-full">
-      <img :src="getImageUrl(`images/photo_3.jpg`)" alt="Montaż pomp ciepła" class="w-full h-full object-cover">
+      <img :src="getImageUrl(`images/photo_3.jpg`)" alt="Montaż pomp ciepła" loading="lazy" class="w-full h-full object-cover">
     </aside>
     <RouterLink to="/" class="relative z-20 w-fit h-fit text-white text-center">
       <h1 class="font-semibold text-3xl mt-16">Pan od Rurek</h1>
@@ -103,7 +103,7 @@ export default {
       </p>
       <section class="grid grid-cols-2 sm:grid-cols-2 sm:grid-rows-2 gap-4 w-full h-fit">
         <RouterLink v-for="(photo, index) in photos()" to="/uslugi" :key="photo" :class="`relative flex flex-col-reverse w-full h-48 rounded-2xl overflow-hidden group`">
-          <img :src="getImageUrl(`images/photo_${index + 1}.jpg`)" :alt="photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1)" class="object-cover absolute w-full h-full group-hover:scale-110 group-hover:cursor-pointer transition-transform duration-300 ease-in-out">
+          <img :src="getImageUrl(`images/photo_${index + 1}.jpg`)" :alt="photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1)" loading="lazy" class="object-cover absolute w-full h-full group-hover:scale-110 group-hover:cursor-pointer transition-transform duration-300 ease-in-out">
           <section class="relative bg-blue pb-4 pt-4 px-4 w-full">
             <p class="text-white sm:font-semibold text-base sm:text-xl">{{ photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1) }}</p>
             <hr class="my-2 border-1">
@@ -126,7 +126,7 @@ export default {
       </p>
       <section class="relative grid grid-rows-3 sm:grid-rows-none sm:grid-cols-3 gap-4 sm:gap-4 w-full h-phone sm:h-64">
         <a v-for="certificate in Object.keys(certificates())" :key="certificate" :href="certificates()[certificate].link" target="_blank" class="relative w-full h-full rounded-2xl overflow-hidden group">
-          <img :src="getImageUrl(`images/${certificate}.jpg`)" :alt="`Certyfikat firmy ${certificate.charAt(0).toUpperCase() + certificate.slice(1)}`" class="object-cover absolute w-full h-full group-hover:scale-110 group-hover:cursor-pointer transition-transform duration-300 ease-in-out">
+          <img :src="getImageUrl(`images/${certificate}.jpg`)" :alt="`Certyfikat firmy ${certificate.charAt(0).toUpperCase() + certificate.slice(1)}`" loading="lazy" class="object-cover absolute w-full h-full group-hover:scale-110 group-hover:cursor-pointer transition-transform duration-300 ease-in-out">
           <section class="relative bg-white flex flex-col-reverse py-3 w-full shadow-md">
             <p class="text-black font-semibold text-xl text-center">{{ certificate.charAt(0).toUpperCase() + certificate.slice(1) }}</p>
           </section>
