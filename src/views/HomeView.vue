@@ -1,4 +1,5 @@
 <script>
+import '@justinribeiro/lite-youtube';
 import {certificates, photos, clientAmount} from '@/data';
 import {scrollInto, mobileCheck, observer} from '@/methods';
 
@@ -36,7 +37,7 @@ export default {
   <section v-if="mobile" class="relative w-full h-fit flex flex-col place-content-between items-center">
     <aside class="absolute z-20 w-full h-full bg-gradient-to-b from-black/60 to-black/0 bg-cover"></aside>
     <aside class="absolute z-10 w-full h-full">
-      <img :src="getImageUrl(`images/photo_3.webp`)" alt="Montaż pomp ciepła" loading="lazy" class="w-full h-full object-cover">
+      <img :src="getImageUrl(`images/photo_3.webp`)" alt="Montaż pomp ciepła" rel="preload" class="w-full h-full object-cover">
     </aside>
     <RouterLink to="/" class="relative z-20 w-fit h-fit text-white text-center">
       <h1 class="font-semibold text-3xl mt-16">Pan od Rurek</h1>
@@ -53,7 +54,7 @@ export default {
   <section v-else class="flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all start">
     <section class="grid place-items-center w-full h-full">
       <section class="relative aspect-auto w-full h-full rounded-2xl overflow-hidden group hover:cursor-pointer">
-        <img :src="getImageUrl(`images/photo_2.webp`)" alt="Montaż pomp ciepła" loading="lazy" class="absolute object-cover w-full h-full group-hover:scale-110 transition-transform duration-300 ease-in-out">
+        <img :src="getImageUrl(`images/photo_2.webp`)" alt="Montaż pomp ciepła" rel="preload" class="absolute object-cover w-full h-full group-hover:scale-110 transition-transform duration-300 ease-in-out">
         <aside class="w-full h-full absolute grid justify-center items-end">
           <section class="w-fit h-fit grid grid-cols-3 mb-4 gap-3">
             <section v-for="index in 3" :key="index" class="w-3 h-3 aspect-square bg-white rounded-full"></section>
@@ -138,7 +139,7 @@ export default {
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <section class="grid sm:grid-cols-[2fr,1fr] sm:gap-12">
         <section v-if="!mobile" class="relative aspect-video sm:aspect-auto sm:w-full sm:h-full">
-          <iframe title="Film Youtube" src="https://www.youtube.com/embed/qhkCIk3yJvE" class="aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl"></iframe>
+          <lite-youtube videoid="qhkCIk3yJvE" class="aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl"></lite-youtube>
         </section>
         <section class="flex flex-col gap-4 items-start">
           <h2 class="text-black font-semibold text-2xl sm:text-6xl">Prezentacja wideo</h2>
