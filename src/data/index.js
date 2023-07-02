@@ -57,4 +57,4 @@ export const certificates = {
     }
 };
 
-export const photos = ['montaż_pomp_ciepła', 'montaż_kotłów', 'montaż_ogrzewania'];
+export const photos = ['montaż_pomp_ciepła', 'montaż_kotłów', 'montaż_ogrzewania', 'czyszczenie_instalacji'];

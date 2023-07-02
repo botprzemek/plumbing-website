@@ -22,6 +22,9 @@ module.exports = {
         'fit': '15%',
         'phone': '5%',
       },
+      borderWidth: {
+        '1': '1px',
+      },
       backgroundSize: {
         'scale': '210%',
       },

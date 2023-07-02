@@ -1,4 +1,4 @@
-export function scrollTo(element) {
+export function scrollInto(element) {
     document.querySelector(`.${element}`).scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
 }
 
@@ -31,7 +31,7 @@ const handleIntersect = (entries) => {
     const classes = ['-translate-y-3', 'opacity-0'], delay = 500;
     let amount = 0;
     entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.49) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.09) {
             setTimeout(() => entry.target.classList.remove(...classes), delay*amount);
             amount++;
         }
