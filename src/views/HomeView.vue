@@ -137,9 +137,9 @@ export default {
   </section>
   <section class="grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all video">
     <section class="flex flex-col gap-4 items-center sm:items-start">
-      <section class="grid sm:grid-cols-[2fr,1fr] sm:gap-12">
-        <section v-if="!mobile" class="relative aspect-video sm:aspect-auto sm:w-full sm:h-full">
-          <lite-youtube videoid="qhkCIk3yJvE" class="aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl"></lite-youtube>
+      <section class="grid sm:grid-cols-[4fr,1fr] sm:gap-12">
+        <section v-if="!mobile" class="relative grid place-items-center aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl overflow-hidden">
+          <lite-youtube videoid="qhkCIk3yJvE" class="absolute aspect-video sm:aspect-auto sm:w-full sm:h-full"></lite-youtube>
         </section>
         <section class="flex flex-col gap-4 items-start">
           <h2 class="text-black font-semibold text-2xl sm:text-6xl">Prezentacja wideo</h2>
