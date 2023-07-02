@@ -19,8 +19,8 @@ import {contacts,routes,socials} from '@/data';
       <section class="flex flex-col sm:flex-row gap-3 sm:gap-9">
         <section class="grid grid-cols-2 sm:flex sm:flex-row gap-4 w-full sm:w-fit sm:gap-12">
           <section>
-            <p class="text-blue font-semibold text-lg">Sociale</p>
-            <ul>
+            <p class="text-blue font-semibold text-lg mb-2">Sociale</p>
+            <ul class="grid grid-flow-row gap-1">
               <li v-for="social in socials" :key="social.name">
                 <a :href="social.link" target="_blank">
                   <p class="text-base text-white hover:text-blue transition-colors duration-200 ease-in">{{ social.name }}</p>
@@ -29,8 +29,8 @@ import {contacts,routes,socials} from '@/data';
             </ul>
           </section>
           <section>
-            <p class="text-blue font-semibold text-lg">Kontakt</p>
-            <ul>
+            <p class="text-blue font-semibold text-lg mb-2">Kontakt</p>
+            <ul class="grid grid-flow-row gap-1">
               <li>
                 <a :href="`tel:${contacts.phone.link}`">
                   <p class="text-base text-white hover:text-blue transition-colors duration-200 ease-in">{{ contacts.phone.link }}</p>
