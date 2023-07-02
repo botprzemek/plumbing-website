@@ -8,7 +8,7 @@ import {contacts,routes,socials} from '@/data';
       <section class="flex flex-col w-full justify-between gap-2 sm:gap-0">
         <p class="text-white font-semibold text-center sm:text-left text-4xl sm:text-4xl">Pan od Rurek</p>
         <p class="text-white text-sm text-center sm:text-left sm:text-base flex flex-col sm:flex-row break-all gap-1">
-          Jakub Sanetra, Spółka z o.o. NIP: 9372743179
+          Spółka z o.o. NIP: 9372743179
         </p>
         <a href="https://botprzemek.pl/" target="_blank" class="text-white text-sm text-center sm:text-left sm:text-base flex justify-center sm:justify-start break-all gap-1">
           Wykonanie
