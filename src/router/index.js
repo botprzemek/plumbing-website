@@ -28,13 +28,16 @@ const router = createRouter({
       component: () => import('../views/ContactView.vue')
     },
     {
-      path: '/:catchAll(.*)', redirect: '/'
-    },
+      path: '/:catchAll(.*)',
+      redirect: '/'
+    }
   ]
 })
 
-router.beforeEach(to => {
-  window.document.title = to.meta.title ? to.meta.title + ' | Pan od Rurek' : 'Strona główna | Pan od Rurek';
-});
+router.beforeEach((to) => {
+  window.document.title = to.meta.title
+    ? to.meta.title + ' | Pan od Rurek'
+    : 'Strona główna | Pan od Rurek'
+})
 
 export default router
