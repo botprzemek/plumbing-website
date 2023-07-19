@@ -69,7 +69,7 @@ export default {
     ></aside>
     <aside class="absolute z-10 w-full h-full">
       <img
-        :src="getImageUrl(`images/photo_3.webp`)"
+        :src="getImageUrl(`images/montaz_pomp_ciepla_1.webp`)"
         alt="Montaż pomp ciepła"
         rel="preload"
         class="w-full h-full object-cover"
