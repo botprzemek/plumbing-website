@@ -109,7 +109,7 @@ export default {
           class="gallery second absolute object-cover w-full h-full translate-x-[100%] transition-transform duration-500 ease-in-out"
         />
         <aside class="w-full h-full absolute grid justify-center items-end">
-          <section :class="`w-fit h-fit grid grid-cols-${Object.keys(photos()).length} mb-4 gap-3`">
+          <section :class="`w-fit h-fit grid grid-flow-col mb-4 gap-3`">
             <aside
               v-for="index in Object.keys(photos()).length"
               :key="index"
