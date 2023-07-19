@@ -81,10 +81,10 @@ export default {
     </RouterLink>
     <section class="relative z-20 w-full h-fit grid place-items-center sm:place-items-start mb-16">
       <button
-        class="px-8 py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 group-hover:cursor-pointer transition-transform duration-300 ease-in-out"
+        class="px-8 py-2 sm:py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 group-hover:cursor-pointer transition-transform duration-300 ease-in-out"
       >
         <RouterLink to="/o-nas" tabindex="-1">
-          <p class="text-base">Przekonaj się sam</p>
+          <p class="text-lg sm:text-base">Przekonaj się sam</p>
         </RouterLink>
       </button>
     </section>
@@ -126,7 +126,7 @@ export default {
       </section>
     </section>
     <section class="flex flex-col gap-4 items-start">
-      <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">Profesjonalny montaż</h1>
+      <h1 class="text-black font-semibold text-3xl sm:text-6xl text-left">Profesjonalny montaż</h1>
       <p class="text-black text-base sm:text-lg">
         Szukasz profesjonalnych instalatorów lub hydraulików? Trafiłeś w odpowiednie miejsce.
         Zapraszamy do kontaktu, odpowiemy na pytania, wycenimy oraz wykonamy usługę dla Ciebie.
@@ -146,7 +146,7 @@ export default {
   >
     <section class="flex flex-col gap-4 items-center">
       <h2
-        class="text-white font-semibold text-2xl sm:text-6xl text-center sm:text-left leading-relaxed sm:leading-none sm:mb-4"
+        class="text-white font-semibold text-3xl sm:text-6xl text-center sm:text-left leading-relaxed sm:leading-none sm:mb-4"
       >
         Zaufały nam
         <br v-if="mobile" />
@@ -167,7 +167,7 @@ export default {
     class="grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all offer"
   >
     <section class="flex flex-col gap-4 items-center sm:items-start">
-      <h2 class="text-black font-semibold text-2xl sm:text-6xl">Nasza oferta</h2>
+      <h2 class="text-black font-semibold text-3xl sm:text-6xl">Nasza oferta</h2>
       <p class="text-black text-base sm:text-lg">
         Świadczymy kompleksowe usługi w zakresie instalacji hydraulicznych i gazowych oraz montażu
         kotłowni/maszynowni, pomp ciepła, ogrzewania podłogowego i czyszczenie chemiczne instalacji.
@@ -187,15 +187,15 @@ export default {
           />
           <section></section>
           <section class="w-full h-full grid place-items-end">
-            <section class="relative bg-blue pb-4 pt-4 px-4 w-full">
+            <section class="relative h-full bg-blue pb-4 pt-4 px-4 w-full">
               <p class="text-white sm:font-semibold text-base sm:text-xl">
                 {{ photos()[photo].name }}
               </p>
               <hr class="my-2 border-1" />
               <section class="h-[3em] overflow-hidden">
-              <span class="text-white leading-[1.5em]">
-                {{ photos()[photo].description }}
-              </span>
+                <span class="text-white leading-[1.5em]">
+                  {{ photos()[photo].description }}
+                </span>
               </section>
             </section>
           </section>
@@ -207,14 +207,14 @@ export default {
     class="grid py-8 sm:py-16 px-phone sm:px-fit bg-blue content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all certificates"
   >
     <section class="flex flex-col gap-4 items-center sm:items-start">
-      <h2 class="text-white font-semibold text-2xl sm:text-6xl">Certyfikaty</h2>
+      <h2 class="text-white font-semibold text-3xl sm:text-6xl">Certyfikaty</h2>
       <p class="text-white text-base sm:text-lg">
         Jesteśmy autoryzowanymi instalatorami kotłów, pomp, kanalizacji i rekuperacji w
         ogólnopolskim stowarzyszeniu firm instalacyjnych i serwisowych oraz certyfikowani do użytku
         urządzeń firmy Vaillant oraz Saunier.
       </p>
       <section
-        class="relative grid grid-rows-3 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-4 w-full h-phone sm:h-64"
+        class="relative grid grid-rows-5 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-4 w-full h-phone sm:h-64"
       >
         <a
           v-for="certificate in Object.keys(certificates())"
@@ -263,10 +263,10 @@ export default {
           </p>
           <section class="w-full h-fit grid place-items-center sm:place-items-start">
             <button
-              class="px-8 py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 group-hover:cursor-pointer transition-transform duration-300 ease-in-out"
+              class="px-8 py-2 sm:py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 group-hover:cursor-pointer transition-transform duration-300 ease-in-out"
             >
               <a href="https://www.youtube.com/@PanOdRurek" target="_blank" tabindex="-1">
-                <p class="text-base">Subskrybuj!</p>
+                <p class="text-lg sm:text-base">Subskrybuj!</p>
               </a>
             </button>
           </section>

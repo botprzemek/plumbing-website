@@ -92,9 +92,9 @@ export default {
               </p>
               <hr class="my-2 border-1" />
               <section class="h-[3em] overflow-hidden">
-              <span class="text-white leading-[1.5em]">
-                {{ photos()[photo].description }}
-              </span>
+                <span class="text-white leading-[1.5em]">
+                  {{ photos()[photo].description }}
+                </span>
               </section>
             </section>
           </section>

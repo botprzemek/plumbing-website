@@ -29,7 +29,9 @@ export default {
   <section
     v-for="photo in Object.keys(photos())"
     :key="photo"
-    :class="`grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all ${photos()[photo]}`"
+    :class="`grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all ${
+      photos()[photo]
+    }`"
   >
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <h2 class="text-black font-semibold text-2xl sm:text-6xl text-left">
