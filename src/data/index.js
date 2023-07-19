@@ -46,20 +46,47 @@ export const socials = [
 export const clientAmount = 5341
 
 export const certificates = {
-  saunier: {
+  saunier_duval: {
+    name: 'Saunier Duval',
     link: 'https://www.saunierduval.pl/'
   },
   osfis: {
+    name: 'Osfis',
     link: 'https://www.osfis.pl/'
   },
   vaillant: {
+    name: 'Vaillant',
     link: 'https://www.vaillant.pl/'
+  },
+  kan_therm: {
+    name: 'Kan-Therm',
+    link: 'https://www.kan-therm.com/'
+  },
+  fernox: {
+    name: 'Fernox',
+    link: 'https://fernox.com.pl/'
   }
 }
 
-export const photos = [
-  'montaż_pomp_ciepła',
-  'montaż_kotłów',
-  'montaż_ogrzewania',
-  'czyszczenie_instalacji'
-]
+export const photos = {
+  montaz_pomp_ciepla: {
+    name: 'Montaż pomp ciepła',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  },
+  montaz_kotlow: {
+    name: 'Montaż kotłów',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  },
+  montaz_ogrzewania: {
+    name: 'Montaż ogrzewania',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  },
+  czyszczenie_instalacji: {
+    name: 'Czyszczenie instalacji',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  }
+}

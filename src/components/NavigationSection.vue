@@ -15,8 +15,8 @@ export default {
     UserIcon
   },
   methods: {
-    scrollTo(element) {
-      scrollInto(element)
+    scrollTo(element, where) {
+      scrollInto(element, where)
     },
     contacts() {
       return contacts
@@ -76,7 +76,7 @@ export default {
         >
       </section>
     </RouterLink>
-    <button v-else @click="scrollTo('header')" class="flex flex-row items-center gap-4">
+    <button v-else @click="scrollTo('header', 'start')" class="flex flex-row items-center gap-4">
       <img src="../assets/images/logo.webp" class="py-2 h-full w-fit" alt="Logo Pan od Rurek" />
       <span
         class="text-black font-semibold text-2xl hover:text-blue transition-colors duration-200 ease-in"

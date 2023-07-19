@@ -1,6 +1,6 @@
 <script>
 import { photos } from '@/data'
-import { observer } from '@/methods'
+import { observe } from '@/methods'
 
 export default {
   name: 'ContactView',
@@ -10,9 +10,7 @@ export default {
     }
   },
   mounted() {
-    setTimeout(async () =>
-      document.querySelectorAll('.content').forEach((element) => observer.observe(element))
-    )
+    observe()
   }
 }
 </script>
@@ -29,18 +27,18 @@ export default {
     </section>
   </section>
   <section
-    v-for="photo in photos()"
+    v-for="photo in Object.keys(photos())"
     :key="photo"
-    :class="`grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all ${photo}`"
+    :class="`grid py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all ${photos()[photo]}`"
   >
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <h2 class="text-black font-semibold text-2xl sm:text-6xl text-left">
-        {{ photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1) }}
+        {{ photos()[photo].name }}
       </h2>
-      <p class="text-black text-base sm:text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-      </p>
+      <span class="text-black text-base sm:text-lg">
+        {{ photos()[photo].description }}
+      </span>
     </section>
   </section>
+  <aside class="w-screen pt-8 sm:pt-16"></aside>
 </template>

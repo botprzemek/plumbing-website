@@ -1,7 +1,7 @@
-export function scrollInto(element) {
+export function scrollInto(element, where) {
   document
     .querySelector(`.${element}`)
-    .scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    .scrollIntoView({ behavior: 'smooth', block: where, inline: 'nearest' })
 }
 
 export function mobileCheck() {
@@ -51,4 +51,10 @@ const handleIntersect = (entries) => {
   })
 }
 
-export const observer = new IntersectionObserver(handleIntersect, options)
+const observer = new IntersectionObserver(handleIntersect, options)
+
+export function observe() {
+  setTimeout(async () =>
+    document.querySelectorAll('.content').forEach((element) => observer.observe(element))
+  )
+}

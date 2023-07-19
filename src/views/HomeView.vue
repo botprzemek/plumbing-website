@@ -1,7 +1,7 @@
 <script>
 import '@justinribeiro/lite-youtube'
-import { certificates, photos, clientAmount } from '@/data'
-import { scrollInto, mobileCheck, observer } from '@/methods'
+import { certificates, clientAmount, photos } from '@/data'
+import { mobileCheck, observe, scrollInto } from '@/methods'
 
 export default {
   name: 'HomeView',
@@ -15,23 +15,47 @@ export default {
     getImageUrl(path) {
       return new URL(`../assets/${path}`, import.meta.url).href
     },
-    scrollInto(element) {
-      scrollInto(element)
+    scrollInto(element, where) {
+      scrollInto(element, where)
+    },
+    changeImage() {
+      if (this.animating) return
+      this.animating = true
+      const photos = Object.keys(this.photos())
+      const images = document.querySelectorAll('.gallery')
+      this.imageState[0] = this.imageState[0] === photos.length - 1 ? 0 : this.imageState[0] + 1
+      this.imageState[1] = this.imageState[1] === photos.length - 1 ? 0 : this.imageState[1] + 1
+      images.forEach((image) =>
+        image.classList.add('transition-transform', 'duration-500', 'ease-in-out')
+      )
+      images[0].classList.toggle('-translate-x-[100%]')
+      images[1].classList.toggle('translate-x-[100%]')
+      setTimeout(() => {
+        images[0].src = this.getImageUrl(`images/${photos[this.imageState[0]]}_1.webp`)
+        images[1].src = this.getImageUrl(`images/${photos[this.imageState[1]]}_1.webp`)
+        images.forEach((image) =>
+          image.classList.remove('transition-transform', 'duration-500', 'ease-in-out')
+        )
+        images[0].classList.toggle('-translate-x-[100%]')
+        images[1].classList.toggle('translate-x-[100%]')
+        this.animating = false
+      }, 750)
     }
   },
   data() {
     return {
       counter: Math.floor(clientAmount / 1000) * 1000,
-      mobile: mobileCheck()
+      mobile: mobileCheck(),
+      imageState: [0, 1],
+      animating: false
     }
   },
   mounted() {
-    setTimeout(async () =>
-      document.querySelectorAll('.content').forEach((element) => observer.observe(element))
-    )
+    observe()
     setInterval(() => {
       if (this.counter !== clientAmount) this.counter++
     }, 0)
+    setInterval(() => this.changeImage(), 10000)
   }
 }
 </script>
@@ -69,23 +93,34 @@ export default {
     v-else
     class="flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all start"
   >
-    <section class="grid place-items-center w-full h-full">
+    <section @click="changeImage()" class="grid place-items-center w-full h-full">
       <section
         class="relative aspect-auto w-full h-full rounded-2xl overflow-hidden group hover:cursor-pointer"
       >
         <img
-          :src="getImageUrl(`images/photo_2.webp`)"
+          :src="getImageUrl(`images/${Object.keys(photos())[0]}_1.webp`)"
           alt="Montaż pomp ciepła"
           rel="preload"
-          class="absolute object-cover w-full h-full group-hover:scale-110 transition-transform duration-300 ease-in-out"
+          class="gallery first absolute object-cover w-full h-full transition-transform duration-500 ease-in-out"
+        />
+        <img
+          :src="getImageUrl(`images/${Object.keys(photos())[1]}_1.webp`)"
+          alt="Montaż pomp ciepła"
+          class="gallery second absolute object-cover w-full h-full translate-x-[100%] transition-transform duration-500 ease-in-out"
         />
         <aside class="w-full h-full absolute grid justify-center items-end">
-          <section class="w-fit h-fit grid grid-cols-3 mb-4 gap-3">
-            <section
-              v-for="index in 3"
+          <section :class="`w-fit h-fit grid grid-cols-${Object.keys(photos()).length} mb-4 gap-3`">
+            <aside
+              v-for="index in Object.keys(photos()).length"
               :key="index"
-              class="w-3 h-3 aspect-square bg-white rounded-full"
-            ></section>
+              class="w-2 h-2 aspect-square"
+            >
+              <section
+                v-if="index === imageState[0] + 1"
+                class="w-full h-full bg-white rounded-full"
+              ></section>
+              <section v-else class="w-full h-full bg-white/50 rounded-full"></section>
+            </aside>
           </section>
         </aside>
       </section>
@@ -98,7 +133,7 @@ export default {
       </p>
       <section class="w-full h-fit grid place-items-center sm:place-items-start">
         <button
-          @click="scrollInto('offer')"
+          @click="scrollInto('offer', 'center')"
           class="px-8 py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out"
         >
           <span class="text-base">Przekonaj się sam</span>
@@ -139,26 +174,30 @@ export default {
       </p>
       <section class="grid grid-cols-2 sm:grid-cols-2 sm:grid-rows-2 gap-4 w-full h-fit">
         <RouterLink
-          v-for="(photo, index) in photos()"
+          v-for="photo in Object.keys(photos())"
           to="/uslugi"
           :key="photo"
-          :class="`relative flex flex-col-reverse w-full h-48 rounded-2xl overflow-hidden group`"
+          :class="`relative grid grid-rows-2 w-full h-full rounded-2xl overflow-hidden group hover:cursor-pointer`"
         >
           <img
-            :src="getImageUrl(`images/photo_${index + 1}.webp`)"
-            :alt="photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1)"
+            :src="getImageUrl(`images/${photo}_1.webp`)"
+            :alt="`Zdjęcie - ${photos()[photo].name}`"
             loading="lazy"
             class="object-cover absolute w-full h-full group-hover:scale-110 group-hover:cursor-pointer transition-transform duration-300 ease-in-out"
           />
-          <section class="relative bg-blue pb-4 pt-4 px-4 w-full">
-            <p class="text-white sm:font-semibold text-base sm:text-xl">
-              {{ photo.charAt(0).toUpperCase() + photo.replaceAll('_', ' ').slice(1) }}
-            </p>
-            <hr class="my-2 border-1" />
-            <span class="text-white">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </span>
+          <section></section>
+          <section class="w-full h-full grid place-items-end">
+            <section class="relative bg-blue pb-4 pt-4 px-4 w-full">
+              <p class="text-white sm:font-semibold text-base sm:text-xl">
+                {{ photos()[photo].name }}
+              </p>
+              <hr class="my-2 border-1" />
+              <section class="h-[3em] overflow-hidden">
+              <span class="text-white leading-[1.5em]">
+                {{ photos()[photo].description }}
+              </span>
+              </section>
+            </section>
           </section>
         </RouterLink>
       </section>
@@ -175,7 +214,7 @@ export default {
         urządzeń firmy Vaillant oraz Saunier.
       </p>
       <section
-        class="relative grid grid-rows-3 sm:grid-rows-none sm:grid-cols-3 gap-4 sm:gap-4 w-full h-phone sm:h-64"
+        class="relative grid grid-rows-3 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-4 w-full h-phone sm:h-64"
       >
         <a
           v-for="certificate in Object.keys(certificates())"
@@ -186,13 +225,15 @@ export default {
         >
           <img
             :src="getImageUrl(`images/${certificate}.webp`)"
-            :alt="`Certyfikat firmy ${certificate.charAt(0).toUpperCase() + certificate.slice(1)}`"
+            :alt="`Certyfikat firmy ${certificates()[certificate].name}`"
             loading="lazy"
             class="object-cover absolute w-full h-full group-hover:scale-110 group-hover:cursor-pointer transition-transform duration-300 ease-in-out"
           />
           <section class="relative bg-white flex flex-col-reverse py-3 w-full shadow-md">
-            <p class="text-black font-semibold text-xl text-center">
-              {{ certificate.charAt(0).toUpperCase() + certificate.slice(1) }}
+            <p
+              class="text-black font-semibold text-xl text-center group-hover:text-blue transition-colors duration-300 ease-in-out"
+            >
+              {{ certificates()[certificate].name }}
             </p>
           </section>
         </a>

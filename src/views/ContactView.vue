@@ -1,6 +1,6 @@
 <script>
 import { contacts } from '@/data'
-import { observer } from '@/methods'
+import { observe } from '@/methods'
 import PhoneIcon from '@/components/icons/PhoneIcon.vue'
 import MailIcon from '@/components/icons/MailIcon.vue'
 import MapIcon from '@/components/icons/MapIcon.vue'
@@ -20,9 +20,7 @@ export default {
     }
   },
   mounted() {
-    setTimeout(async () =>
-      document.querySelectorAll('.content').forEach((element) => observer.observe(element))
-    )
+    observe()
   }
 }
 </script>
@@ -37,8 +35,8 @@ export default {
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
       </p>
       <section class="w-full grid grid-cols-[3fr,1fr] gap-4">
-        <section class="w-full">
-          <textarea class="w-full h-full border-black border-2 rounded-2xl resize-none" />
+        <section class="w-full p-4 border-black border-2 rounded-2xl">
+          <textarea class="w-full h-full resize-none focus:outline-0" />
         </section>
         <section class="w-full">
           <section class="w-full grid grid-rows-3 gap-4">
@@ -96,4 +94,5 @@ export default {
       </button>
     </form>
   </section>
+  <aside class="w-screen"></aside>
 </template>
