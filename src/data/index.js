@@ -72,21 +72,21 @@ export const photos = {
   montaz_pomp_ciepla: {
     name: 'Montaż pomp ciepła',
     description:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      'Oferujemy montaż pomp ciepła marki Vaillant oraz Saunier Duval, zarówno Monoblock jak i Split, posiadamy Autoryzację dzieki której możemy w profesionalny sposób dobrać, zainstalować oraz uruchomić urządzenie.'
   },
   montaz_kotlow: {
     name: 'Montaż kotłów',
     description:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      'Jako autoryzowany instalator marki Vaillant oraz Saunier Duval oferujemy profesionalny montaż kotłów gazowych kondensacyjnych, rozbudowę kotłowni o dodatkowe urządzenie, wykonujemy rozbudowane układy grzewcze w oparciu o schematy producenta.'
   },
   montaz_ogrzewania: {
     name: 'Montaż ogrzewania',
     description:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      'Oferujemy wykonanie instalacji grzewczej  na systemie KAN-THERM, jako autoryzowany instalator montujemy układ grzewczy w systemie ULTRALINE a ogrzewanie podłogowe na rurach BLUEFLOOR, dzieki czemu całe systemowe ogrzewanie od jednego producenta umożliwia otrzymanie dodatkowej długoletniej gwarancji.'
   },
   czyszczenie_instalacji: {
     name: 'Czyszczenie instalacji',
     description:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      'Wykonujemy usługi chemicznego czyszczenia instalacji w oparciu o chemię lidera w dziedzinie chemi instalacyjnej jaką jest marka FERNOX, działamy na wysoko wydajnej pompie, dzieki której możemy w łatwy sposób doprowadzić twoją instalację do prawidłowego działania. Dzięki czyszczeniu instalacji zapewniamy że jest sprawność zostanie poprawiona, oraz zachowasz gwarancję nowo montowanych urządzeń grzewczych.'
   }
 }

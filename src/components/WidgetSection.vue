@@ -1,5 +1,5 @@
 <script setup>
-import PhoneIcon from '@/components/icons/PhoneIcon.vue'
+import PhoneIcon from '@/components/icon/PhoneIcon.vue'
 import { contacts } from '@/data'
 import { mobileCheck } from '@/methods'
 </script>

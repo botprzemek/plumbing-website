@@ -1,10 +1,10 @@
 <script>
 import { contacts, routes, clientAmount } from '@/data'
 import { scrollInto, mobileCheck } from '@/methods'
-import CheckIcon from '@/components/icons/CheckIcon.vue'
-import PhoneIcon from '@/components/icons/PhoneIcon.vue'
-import TimeIcon from '@/components/icons/TimeIcon.vue'
-import UserIcon from '@/components/icons/UserIcon.vue'
+import CheckIcon from '@/components/icon/CheckIcon.vue'
+import PhoneIcon from '@/components/icon/PhoneIcon.vue'
+import TimeIcon from '@/components/icon/TimeIcon.vue'
+import UserIcon from '@/components/icon/UserIcon.vue'
 
 export default {
   name: 'NavigationSection',

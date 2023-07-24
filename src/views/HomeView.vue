@@ -2,9 +2,11 @@
 import '@justinribeiro/lite-youtube'
 import { certificates, clientAmount, photos } from '@/data'
 import { mobileCheck, observe, scrollInto } from '@/methods'
+import IboLogo from '@/components/logo/IboLogo.vue';
 
 export default {
   name: 'HomeView',
+  components: {IboLogo},
   methods: {
     photos() {
       return photos
@@ -127,10 +129,20 @@ export default {
     </section>
     <section class="flex flex-col gap-4 items-start">
       <h1 class="text-black font-semibold text-3xl sm:text-6xl text-left">Profesjonalny montaż</h1>
-      <p class="text-black text-base sm:text-lg">
-        Szukasz profesjonalnych instalatorów lub hydraulików? Trafiłeś w odpowiednie miejsce.
-        Zapraszamy do kontaktu, odpowiemy na pytania, wycenimy oraz wykonamy usługę dla Ciebie.
-      </p>
+      <ul>
+        <li>
+          <p>Pompy ciepła Vaillant oraz Saunier Duval,</p>
+        </li>
+        <li>
+          <p>Kotły gazowe Vaillant oraz Saunier Duval,</p>
+        </li>
+        <li>
+          <p>Systemowe ogrzewanie marki KAN-Therm,</p>
+        </li>
+        <li>
+          <p>Chemiczne czyszczenie instalacji grzewczych,</p>
+        </li>
+      </ul>
       <section class="w-full h-fit grid place-items-center sm:place-items-start">
         <button
           @click="scrollInto('offer', 'center')"
@@ -161,6 +173,16 @@ export default {
         Firma została stworzona by realizować marzenia ludzi, posiadamy wieloletnie doświadczenie w
         budowie.
       </p>
+      <h2
+          class="text-white font-semibold text-3xl sm:text-6xl text-center sm:text-left leading-relaxed sm:leading-none sm:mb-4"
+      >
+        Swoje instalacje opieramy na systemach:
+      </h2>
+      <section class="w-full h-12 grid grid-cols-7 gap-3 pb-8 place-items-center">
+        <aside v-for="index in 7" :key="index" class="h-full">
+          <IboLogo/>
+        </aside>
+      </section>
     </section>
   </section>
   <section
@@ -209,9 +231,11 @@ export default {
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <h2 class="text-white font-semibold text-3xl sm:text-6xl">Certyfikaty</h2>
       <p class="text-white text-base sm:text-lg">
-        Jesteśmy autoryzowanymi instalatorami kotłów, pomp, kanalizacji i rekuperacji w
-        ogólnopolskim stowarzyszeniu firm instalacyjnych i serwisowych oraz certyfikowani do użytku
-        urządzeń firmy Vaillant oraz Saunier.
+        Jesteśmy autoryzowanym instalatorem kotłow gazowych,
+        pomp ciepła, systemów grzewczych,
+        należymy do ogólnopolskiego stowarzyszenie firm instalacyjnych
+        i serwisowych a naszym głównym atutem
+        jest certyfikacja VAILLANT oraz SAUNIER DUVAL.
       </p>
       <section
         class="relative grid grid-rows-5 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-4 w-full h-phone sm:h-64"

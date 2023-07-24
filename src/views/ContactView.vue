@@ -1,10 +1,10 @@
 <script>
 import { contacts } from '@/data'
 import { observe } from '@/methods'
-import PhoneIcon from '@/components/icons/PhoneIcon.vue'
-import MailIcon from '@/components/icons/MailIcon.vue'
-import MapIcon from '@/components/icons/MapIcon.vue'
-import SendIcon from '@/components/icons/SendIcon.vue'
+import PhoneIcon from '@/components/icon/PhoneIcon.vue'
+import MailIcon from '@/components/icon/MailIcon.vue'
+import MapIcon from '@/components/icon/MapIcon.vue'
+import SendIcon from '@/components/icon/SendIcon.vue'
 
 export default {
   name: 'ContactView',
