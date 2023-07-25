@@ -31,8 +31,8 @@ export default {
     <form class="w-full flex flex-col gap-4 items-center sm:items-start">
       <h1 class="text-black font-semibold text-2xl sm:text-6xl">Kontakt</h1>
       <p class="text-black text-base sm:text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+        Zapraszamy do kontaktu odpowiadamy na wszystkie pytania związane
+        z instalacjami oraz wykonamy dla ciebie darmową wycenę usługi.
       </p>
       <section class="w-full grid grid-cols-[3fr,1fr] gap-4">
         <section class="w-full p-4 border-black border-2 rounded-2xl">

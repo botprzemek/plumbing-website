@@ -97,11 +97,11 @@ export default {
   </section>
   <section
     v-else
-    class="flex flex-col sm:grid sm:grid-cols-[3fr,1fr] gap-4 sm:gap-12 py-8 sm:py-16 px-phone sm:px-fit content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all start"
+    class="relative w-full h-[32rem] gap-4 sm:gap-12 content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all start"
   >
-    <section @click="changeImage()" class="grid place-items-center w-full h-full">
+    <section @click="changeImage()" class="absolute grid place-items-center w-full h-full">
       <section
-        class="relative aspect-auto w-full h-full rounded-2xl overflow-hidden group hover:cursor-pointer"
+        class="relative aspect-auto w-full h-full overflow-hidden group hover:cursor-pointer"
       >
         <img
           :src="getImageUrl(`images/${Object.keys(photos())[0]}_1.webp`)"
@@ -131,34 +131,36 @@ export default {
         </aside>
       </section>
     </section>
-    <section class="flex flex-col gap-4 items-start">
-      <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">Profesjonalny montaż</h1>
-      <ul class="list-[circle] list-inside">
-        <li>
-          <span>Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> ora <span class="text-blue font-semibold">Saunier Duval,</span></span>
-        </li>
-        <li>
-          <span>Kotły gazowe <span class="text-blue font-semibold">Vaillant</span> oraz <span class="text-blue font-semibold">Saunier Duval,</span></span>
-        </li>
-        <li>
-          <span>Systemowe ogrzewanie marki <span class="text-blue font-semibold">KAN-Therm,</span></span>
-        </li>
-        <li>
-          <span>Chemiczne czyszczenie instalacji <span class="text-blue font-semibold">grzewczych,</span></span>
-        </li>
-      </ul>
-      <section class="w-full h-fit grid place-items-center sm:place-items-start">
-        <button
-          @click="scrollInto('offer', 'center')"
-          class="px-8 py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out"
-        >
-          <span class="text-base">Przekonaj się sam</span>
-        </button>
+    <section @click="changeImage()" class="relative w-full h-full flex justify-end px-phone sm:px-fit hover:cursor-pointer">
+      <section class="flex flex-col gap-3 justify-center px-8 w-fit h-full bg-white/90">
+        <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">Profesjonalny montaż</h1>
+        <ul class="list-[circle] list-inside">
+          <li>
+            <span>Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> ora <span class="text-blue font-semibold">Saunier Duval,</span></span>
+          </li>
+          <li>
+            <span>Kotły gazowe <span class="text-blue font-semibold">Vaillant</span> oraz <span class="text-blue font-semibold">Saunier Duval,</span></span>
+          </li>
+          <li>
+            <span>Systemowe ogrzewanie marki <span class="text-blue font-semibold">KAN-Therm,</span></span>
+          </li>
+          <li>
+            <span>Chemiczne czyszczenie instalacji <span class="text-blue font-semibold">grzewczych,</span></span>
+          </li>
+        </ul>
+        <section class="w-full h-fit grid place-items-center sm:place-items-start">
+          <button
+              @click="scrollInto('offer', 'center')"
+              class="px-8 py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out"
+          >
+            <span class="text-base">Przekonaj się sam</span>
+          </button>
+        </section>
       </section>
     </section>
   </section>
   <section
-    class="grid py-8 sm:py-16 px-phone sm:px-fit bg-blue content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all trust"
+    class="grid py-8 sm:py-16 px-phone sm:px-fit bg-blue content opacity-0 ease-in-out duration-[1000ms] transition-all trust"
   >
     <section class="flex flex-col gap-4 items-center">
       <h2

@@ -67,10 +67,6 @@ export default {
   >
     <section class="w-full h-full flex flex-col gap-4 items-center">
       <h1 class="text-black font-semibold text-2xl sm:text-6xl">Galeria</h1>
-      <p class="text-black text-base sm:text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-      </p>
       <section class="grid grid-cols-2 sm:grid-cols-2 sm:grid-rows-2 gap-4 w-full h-fit">
         <section
           v-for="(photo, index) in Object.keys(photos())"
