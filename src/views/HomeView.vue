@@ -111,7 +111,7 @@ export default {
       </section>
     </section>
     <section class="relative w-full h-full flex justify-end px-phone sm:px-fit hover:cursor-pointer">
-      <section class="flex flex-col gap-3 justify-center px-8 w-fit h-full bg-white/90">
+      <section class="flex flex-col gap-3 justify-center px-8 w-fit h-full bg-white/80">
         <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">
           Profesjonalny<br/>
           montaż
