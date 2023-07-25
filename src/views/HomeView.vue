@@ -99,7 +99,7 @@ export default {
     v-else
     class="relative w-full h-[32rem] gap-4 sm:gap-12 content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all start"
   >
-    <section @click="changeImage()" class="absolute grid place-items-center w-full h-full">
+    <section class="absolute grid place-items-center w-full h-full">
       <section
         class="relative aspect-auto w-full h-full overflow-hidden group hover:cursor-pointer"
       >
@@ -109,31 +109,14 @@ export default {
           rel="preload"
           class="gallery first absolute object-cover w-full h-full transition-transform duration-500 ease-in-out"
         />
-        <img
-          :src="getImageUrl(`images/${Object.keys(photos())[1]}_1.webp`)"
-          alt="Montaż pomp ciepła"
-          class="gallery second absolute object-cover w-full h-full translate-x-[100%] transition-transform duration-500 ease-in-out"
-        />
-        <aside class="w-full h-full absolute grid justify-center items-end">
-          <section :class="`w-fit h-fit grid grid-flow-col mb-4 gap-3`">
-            <aside
-              v-for="index in Object.keys(photos()).length"
-              :key="index"
-              class="w-2 h-2 aspect-square"
-            >
-              <section
-                v-if="index === imageState[0] + 1"
-                class="w-full h-full bg-white rounded-full"
-              ></section>
-              <section v-else class="w-full h-full bg-white/50 rounded-full"></section>
-            </aside>
-          </section>
-        </aside>
       </section>
     </section>
-    <section @click="changeImage()" class="relative w-full h-full flex justify-end px-phone sm:px-fit hover:cursor-pointer">
+    <section class="relative w-full h-full flex justify-end px-phone sm:px-fit hover:cursor-pointer">
       <section class="flex flex-col gap-3 justify-center px-8 w-fit h-full bg-white/90">
-        <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">Profesjonalny montaż</h1>
+        <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">
+          Profesjonalny<br/>
+          montaż
+        </h1>
         <ul class="list-[circle] list-inside">
           <li>
             <span>Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> ora <span class="text-blue font-semibold">Saunier Duval,</span></span>
