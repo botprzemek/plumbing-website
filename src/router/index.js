@@ -37,7 +37,7 @@ const router = createRouter({
 router.beforeEach((to) => {
   window.document.title = to.meta.title
     ? to.meta.title + ' | Pan od Rurek'
-    : 'Strona główna | Pan od Rurek'
+    : 'Usługi instalatorskie | Pan od Rurek'
 })
 
 export default router
