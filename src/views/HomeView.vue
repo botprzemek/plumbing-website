@@ -3,10 +3,14 @@ import '@justinribeiro/lite-youtube'
 import { certificates, clientAmount, photos } from '@/data'
 import { mobileCheck, observe, scrollInto } from '@/methods'
 import IboLogo from '@/components/logo/IboLogo.vue';
+import FernoxLogo from '@/components/logo/FernoxLogo.vue';
+import SaunierLogo from '@/components/logo/SaunierLogo.vue';
+import VaillantLogo from '@/components/logo/VaillantLogo.vue';
+import KanLogo from '@/components/logo/KanLogo.vue';
 
 export default {
   name: 'HomeView',
-  components: {IboLogo},
+  components: {VaillantLogo, SaunierLogo, FernoxLogo, IboLogo, KanLogo},
   methods: {
     photos() {
       return photos
@@ -128,19 +132,19 @@ export default {
       </section>
     </section>
     <section class="flex flex-col gap-4 items-start">
-      <h1 class="text-black font-semibold text-3xl sm:text-6xl text-left">Profesjonalny montaż</h1>
-      <ul>
+      <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">Profesjonalny montaż</h1>
+      <ul class="list-[circle] list-inside">
         <li>
-          <p>Pompy ciepła Vaillant oraz Saunier Duval,</p>
+          <span>Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> ora <span class="text-blue font-semibold">Saunier Duval,</span></span>
         </li>
         <li>
-          <p>Kotły gazowe Vaillant oraz Saunier Duval,</p>
+          <span>Kotły gazowe <span class="text-blue font-semibold">Vaillant</span> oraz <span class="text-blue font-semibold">Saunier Duval,</span></span>
         </li>
         <li>
-          <p>Systemowe ogrzewanie marki KAN-Therm,</p>
+          <span>Systemowe ogrzewanie marki <span class="text-blue font-semibold">KAN-Therm,</span></span>
         </li>
         <li>
-          <p>Chemiczne czyszczenie instalacji grzewczych,</p>
+          <span>Chemiczne czyszczenie instalacji <span class="text-blue font-semibold">grzewczych,</span></span>
         </li>
       </ul>
       <section class="w-full h-fit grid place-items-center sm:place-items-start">
@@ -174,13 +178,25 @@ export default {
         budowie.
       </p>
       <h2
-          class="text-white font-semibold text-3xl sm:text-6xl text-center sm:text-left leading-relaxed sm:leading-none sm:mb-4"
+          class="text-white font-semibold text-xl text-center sm:text-left leading-relaxed sm:leading-none"
       >
         Swoje instalacje opieramy na systemach:
       </h2>
-      <section class="w-full h-12 grid grid-cols-7 gap-3 pb-8 place-items-center">
-        <aside v-for="index in 7" :key="index" class="h-full">
+      <section class="w-full h-12 grid grid-cols-5 gap-3 pb-8 place-items-center">
+        <aside class="h-full">
           <IboLogo/>
+        </aside>
+        <aside class="h-full">
+          <SaunierLogo/>
+        </aside>
+        <aside class="h-full">
+          <VaillantLogo/>
+        </aside>
+        <aside class="h-full">
+          <FernoxLogo/>
+        </aside>
+        <aside class="h-full">
+          <KanLogo/>
         </aside>
       </section>
     </section>
@@ -274,7 +290,13 @@ export default {
           class="relative grid place-items-center aspect-video sm:aspect-auto sm:w-full sm:h-full rounded-2xl overflow-hidden"
         >
           <lite-youtube
+            videotitle="Pan od Rurek"
             videoid="qhkCIk3yJvE"
+            playlistid="UULFbMZ-mKfXFLL73mE6DYa5Bg"
+            params="playnext=1"
+            loading="lazy"
+            nocookie
+            autoload
             class="absolute aspect-video sm:aspect-auto sm:w-full sm:h-full"
           ></lite-youtube>
         </section>
