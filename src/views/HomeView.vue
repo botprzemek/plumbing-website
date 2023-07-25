@@ -61,7 +61,6 @@ export default {
     setInterval(() => {
       if (this.counter !== clientAmount) this.counter++
     }, 0)
-    setInterval(() => this.changeImage(), 10000)
   }
 }
 </script>
