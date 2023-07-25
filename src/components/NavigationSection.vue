@@ -45,7 +45,7 @@ export default {
 
 <template>
   <header
-    class="header z-40 w-full select-none h-fit bg-blue text-sm px-phone sm:px-fit"
+    class="header z-40 w-full h-fit bg-blue text-sm px-phone sm:px-fit"
     tabindex="-1"
   >
     <ul v-if="!mobile" class="h-full flex flex-row justify-between items-center my-3">

@@ -4,7 +4,7 @@ import { contacts, routes, socials } from '@/data'
 
 <template>
   <footer
-    class="relative z-30 select-none h-fit bg-black px-phone sm:px-fit py-12 flex flex-col gap-3"
+    class="relative z-30 h-fit bg-black px-phone sm:px-fit py-12 flex flex-col gap-3"
   >
     <section class="flex flex-col sm:flex-row justify-between gap-3 sm:gap-9">
       <section class="flex flex-col w-full justify-between gap-2 sm:gap-0">
