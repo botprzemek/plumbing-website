@@ -118,7 +118,7 @@ export default {
         </h1>
         <ul class="list-[circle] list-inside">
           <li>
-            <span>Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> ora <span class="text-blue font-semibold">Saunier Duval,</span></span>
+            <span>Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> oraz <span class="text-blue font-semibold">Saunier Duval,</span></span>
           </li>
           <li>
             <span>Kotły gazowe <span class="text-blue font-semibold">Vaillant</span> oraz <span class="text-blue font-semibold">Saunier Duval,</span></span>
