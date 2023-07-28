@@ -21,12 +21,10 @@ export default {
     <section class="w-full flex flex-col gap-4 items-center sm:items-start">
       <h1 class="text-black font-semibold text-2xl sm:text-6xl">Usługi</h1>
       <p class="text-black text-base sm:text-lg">
-        Oferujemy montaż systemowych układów grzewczych
-        w oparciu o profesjonalne marki takie jak
-        Kan-therm oraz urządzenia grzewcze w klasie PREMIUM
-        wiodących producentów takich jak Vaillant, Saunier Duval.
-        Ponad to oferujemy usługi chemicznego czyszczenia instalacji
-        na środkach marki FERNOX.
+        Oferujemy montaż systemowych układów grzewczych w oparciu o profesjonalne marki takie jak
+        Kan-therm oraz urządzenia grzewcze w klasie PREMIUM wiodących producentów takich jak
+        Vaillant, Saunier Duval. Ponad to oferujemy usługi chemicznego czyszczenia instalacji na
+        środkach marki FERNOX.
       </p>
     </section>
   </section>

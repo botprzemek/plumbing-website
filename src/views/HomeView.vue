@@ -2,15 +2,15 @@
 import '@justinribeiro/lite-youtube'
 import { certificates, clientAmount, photos } from '@/data'
 import { mobileCheck, observe, scrollInto } from '@/methods'
-import IboLogo from '@/components/logo/IboLogo.vue';
-import FernoxLogo from '@/components/logo/FernoxLogo.vue';
-import SaunierLogo from '@/components/logo/SaunierLogo.vue';
-import VaillantLogo from '@/components/logo/VaillantLogo.vue';
-import KanLogo from '@/components/logo/KanLogo.vue';
+import IboLogo from '@/components/logo/IboLogo.vue'
+import FernoxLogo from '@/components/logo/FernoxLogo.vue'
+import SaunierLogo from '@/components/logo/SaunierLogo.vue'
+import VaillantLogo from '@/components/logo/VaillantLogo.vue'
+import KanLogo from '@/components/logo/KanLogo.vue'
 
 export default {
   name: 'HomeView',
-  components: {VaillantLogo, SaunierLogo, FernoxLogo, IboLogo, KanLogo},
+  components: { VaillantLogo, SaunierLogo, FernoxLogo, IboLogo, KanLogo },
   methods: {
     photos() {
       return photos
@@ -110,30 +110,44 @@ export default {
         />
       </section>
     </section>
-    <section class="relative w-full h-full flex justify-end px-phone sm:px-fit hover:cursor-pointer">
+    <section
+      class="relative w-full h-full flex justify-end px-phone sm:px-fit hover:cursor-pointer"
+    >
       <section class="flex flex-col gap-3 justify-center px-8 w-fit h-full bg-white/80">
         <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">
-          Profesjonalny<br/>
+          Profesjonalny<br />
           montaż
         </h1>
         <ul class="list-[circle] list-inside">
           <li>
-            <span>Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> oraz <span class="text-blue font-semibold">Saunier Duval,</span></span>
+            <span
+              >Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> oraz
+              <span class="text-blue font-semibold">Saunier Duval,</span></span
+            >
           </li>
           <li>
-            <span>Kotły gazowe <span class="text-blue font-semibold">Vaillant</span> oraz <span class="text-blue font-semibold">Saunier Duval,</span></span>
+            <span
+              >Kotły gazowe <span class="text-blue font-semibold">Vaillant</span> oraz
+              <span class="text-blue font-semibold">Saunier Duval,</span></span
+            >
           </li>
           <li>
-            <span>Systemowe ogrzewanie marki <span class="text-blue font-semibold">KAN-Therm,</span></span>
+            <span
+              >Systemowe ogrzewanie marki
+              <span class="text-blue font-semibold">KAN-Therm,</span></span
+            >
           </li>
           <li>
-            <span>Chemiczne czyszczenie instalacji <span class="text-blue font-semibold">grzewczych,</span></span>
+            <span
+              >Chemiczne czyszczenie instalacji
+              <span class="text-blue font-semibold">grzewczych,</span></span
+            >
           </li>
         </ul>
         <section class="w-full h-fit grid place-items-center sm:place-items-start">
           <button
-              @click="scrollInto('offer', 'center')"
-              class="px-8 py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out"
+            @click="scrollInto('offer', 'center')"
+            class="px-8 py-1 bg-blue h-fit w-fit rounded-full border-2 border-blue text-white hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out"
           >
             <span class="text-base">Przekonaj się sam</span>
           </button>
@@ -162,25 +176,25 @@ export default {
         budowie.
       </p>
       <h2
-          class="text-white font-semibold text-xl text-center sm:text-left leading-relaxed sm:leading-none"
+        class="text-white font-semibold text-xl text-center sm:text-left leading-relaxed sm:leading-none"
       >
         Swoje instalacje opieramy na systemach:
       </h2>
       <section class="w-full h-12 grid grid-cols-5 gap-3 pb-8 place-items-center">
         <aside class="h-full">
-          <IboLogo/>
+          <IboLogo />
         </aside>
         <aside class="h-full">
-          <SaunierLogo/>
+          <SaunierLogo />
         </aside>
         <aside class="h-full">
-          <VaillantLogo/>
+          <VaillantLogo />
         </aside>
         <aside class="h-full">
-          <FernoxLogo/>
+          <FernoxLogo />
         </aside>
         <aside class="h-full">
-          <KanLogo/>
+          <KanLogo />
         </aside>
       </section>
     </section>
@@ -231,11 +245,9 @@ export default {
     <section class="flex flex-col gap-4 items-center sm:items-start">
       <h2 class="text-white font-semibold text-3xl sm:text-6xl">Certyfikaty</h2>
       <p class="text-white text-base sm:text-lg">
-        Jesteśmy autoryzowanym instalatorem kotłow gazowych,
-        pomp ciepła, systemów grzewczych,
-        należymy do ogólnopolskiego stowarzyszenie firm instalacyjnych
-        i serwisowych a naszym głównym atutem
-        jest certyfikacja VAILLANT oraz SAUNIER DUVAL.
+        Jesteśmy autoryzowanym instalatorem kotłow gazowych, pomp ciepła, systemów grzewczych,
+        należymy do ogólnopolskiego stowarzyszenie firm instalacyjnych i serwisowych a naszym
+        głównym atutem jest certyfikacja VAILLANT oraz SAUNIER DUVAL.
       </p>
       <section
         class="relative grid grid-rows-5 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-4 w-full h-phone sm:h-64"

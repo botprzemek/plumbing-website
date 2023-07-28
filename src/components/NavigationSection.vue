@@ -44,10 +44,7 @@ export default {
 </script>
 
 <template>
-  <header
-    class="header z-40 w-full h-fit bg-blue text-sm px-phone sm:px-fit"
-    tabindex="-1"
-  >
+  <header class="header z-40 w-full h-fit bg-blue text-sm px-phone sm:px-fit" tabindex="-1">
     <ul v-if="!mobile" class="h-full flex flex-row justify-between items-center my-3">
       <li class="flex items-center gap-2">
         <CheckIcon />

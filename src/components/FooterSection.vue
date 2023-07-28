@@ -3,9 +3,7 @@ import { contacts, routes, socials } from '@/data'
 </script>
 
 <template>
-  <footer
-    class="relative z-30 h-fit bg-black px-phone sm:px-fit py-12 flex flex-col gap-3"
-  >
+  <footer class="relative z-30 h-fit bg-black px-phone sm:px-fit py-12 flex flex-col gap-3">
     <section class="flex flex-col sm:flex-row justify-between gap-3 sm:gap-9">
       <section class="flex flex-col w-full justify-between gap-2 sm:gap-0">
         <p class="text-white font-semibold text-center sm:text-left text-4xl sm:text-4xl">

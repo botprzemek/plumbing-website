@@ -8,9 +8,7 @@ import WidgetSection from '@/components/WidgetSection.vue'
 
 <template>
   <NavigationSection />
-  <main
-    class="relative z-10 grid box-contents place-content-center scroll-smooth my-auto"
-  >
+  <main class="relative z-10 grid box-contents place-content-center scroll-smooth my-auto">
     <RouterView />
   </main>
   <WidgetSection />
