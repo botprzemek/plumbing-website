@@ -4,6 +4,12 @@ export function scrollInto(element, where) {
     .scrollIntoView({ behavior: 'smooth', block: where, inline: 'nearest' })
 }
 
+export function toggleMenu() {
+  let menu = document.querySelector(`.menu`);
+  if (!menu.classList.contains('hidden')) menu.classList.add('hidden', 'opacity-0');
+  else menu.classList.remove('hidden', 'opacity-0');
+}
+
 export function mobileCheck() {
   let check = false
   ;(function (a) {

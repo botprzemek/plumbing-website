@@ -80,7 +80,7 @@ export default {
         class="w-full h-full object-cover"
       />
     </aside>
-    <RouterLink to="/" class="relative z-20 w-fit h-fit text-white text-center">
+    <RouterLink to="/" class="relative z-20 w-fit h-fit p-4 text-white text-center">
       <h1 class="font-semibold text-3xl mt-16">Pan od Rurek</h1>
       <p class="mb-8">Profesjonalne instalacje i montaż</p>
     </RouterLink>
@@ -100,7 +100,7 @@ export default {
   >
     <section class="absolute grid place-items-center w-full h-full">
       <section
-        class="relative aspect-auto w-full h-full overflow-hidden group hover:cursor-pointer"
+        class="relative aspect-auto w-full h-full overflow-hidden"
       >
         <img
           :src="getImageUrl(`images/${Object.keys(photos())[0]}_1.webp`)"
@@ -111,7 +111,7 @@ export default {
       </section>
     </section>
     <section
-      class="relative w-full h-full flex justify-end px-phone sm:px-fit hover:cursor-pointer"
+      class="relative w-full h-full flex justify-end px-phone sm:px-fit"
     >
       <section class="flex flex-col gap-3 justify-center px-8 w-fit h-full bg-white/80">
         <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">
@@ -122,8 +122,8 @@ export default {
           <li>
             <span
               >Pompy ciepła <span class="text-blue font-semibold">Vaillant</span> oraz
-              <span class="text-blue font-semibold">Saunier Duval,</span></span
-            >
+              <span class="text-blue font-semibold">Saunier Duval,</span>
+            </span>
           </li>
           <li>
             <span
@@ -180,20 +180,20 @@ export default {
       >
         Swoje instalacje opieramy na systemach:
       </h2>
-      <section class="w-full h-12 grid grid-cols-5 gap-3 pb-8 place-items-center">
-        <aside class="h-full">
+      <section class="w-full h-fit grid grid-rows-2 grid-cols-3 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-8 px-2 sm:px-0 sm:pb-8 place-items-center">
+        <aside class="w-full h-full">
           <IboLogo />
         </aside>
-        <aside class="h-full">
+        <aside class="w-full h-full">
           <SaunierLogo />
         </aside>
-        <aside class="h-full">
+        <aside class="w-full h-full">
           <VaillantLogo />
         </aside>
-        <aside class="h-full">
+        <aside class="w-full h-full">
           <FernoxLogo />
         </aside>
-        <aside class="h-full">
+        <aside class="w-full h-full">
           <KanLogo />
         </aside>
       </section>
