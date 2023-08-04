@@ -1,6 +1,6 @@
 <script>
 import { contacts, routes, clientAmount } from '@/data'
-import {scrollInto, mobileCheck, toggleMenu} from '@/methods'
+import { scrollInto, mobileCheck, toggleMenu } from '@/methods'
 import CheckIcon from '@/components/icon/CheckIcon.vue'
 import PhoneIcon from '@/components/icon/PhoneIcon.vue'
 import TimeIcon from '@/components/icon/TimeIcon.vue'
@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     toggleMenu() {
-      toggleMenu();
+      toggleMenu()
     },
     scrollTo(element, where) {
       scrollInto(element, where)
@@ -128,35 +128,39 @@ export default {
       </li>
     </ul>
   </nav>
-  <nav @click="toggleMenu()"
-      v-else
-      class="menu fixed z-50 px-phone sm:px-fit grid grid-flow-col place-content-center sm:flex sm:flex-row sm:justify-between w-full h-screen bg-white/60 backdrop-blur-sm transition-all duration-300 ease-in-out hidden opacity-0"
+  <nav
+    @click="toggleMenu()"
+    v-else
+    class="menu fixed z-50 px-phone sm:px-fit grid grid-flow-col place-content-center sm:flex sm:flex-row sm:justify-between w-full h-screen bg-white/60 backdrop-blur-sm transition-all duration-300 ease-in-out hidden opacity-0"
   >
     <ul class="w-full grid grid-flow-row sm:flex flex-row gap-2 sm:gap-4 items-center">
       <li>
         <button
-            v-if="path === '/'"
-            @click="scrollTo('header')"
-            class="w-full text-blue font-semibold text-3xl udr-anim text-center"
+          v-if="path === '/'"
+          @click="scrollTo('header')"
+          class="w-full text-blue font-semibold text-3xl udr-anim text-center"
         >
           <span>Start</span>
         </button>
         <RouterLink
-            v-else
-            to="/"
-            class="w-full text-black text-3xl hover:text-blue transition-colors duration-200 ease-in udr-anim text-center"
+          v-else
+          to="/"
+          class="w-full text-black text-3xl hover:text-blue transition-colors duration-200 ease-in udr-anim text-center"
         >
           <span>Start</span>
         </RouterLink>
       </li>
       <li v-for="route in routes()" :key="route">
-        <button v-if="path === route.link" class="w-full text-blue font-semibold text-3xl udr-anim text-center">
+        <button
+          v-if="path === route.link"
+          class="w-full text-blue font-semibold text-3xl udr-anim text-center"
+        >
           <span>{{ route.name }}</span>
         </button>
         <RouterLink
-            v-else
-            :to="route.link"
-            class="w-full text-black text-3xl hover:text-blue hover:font-semibold transition-colors duration-200 ease-in udr-anim text-center"
+          v-else
+          :to="route.link"
+          class="w-full text-black text-3xl hover:text-blue hover:font-semibold transition-colors duration-200 ease-in udr-anim text-center"
         >
           <span>{{ route.name }}</span>
         </RouterLink>

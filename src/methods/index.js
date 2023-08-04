@@ -5,9 +5,9 @@ export function scrollInto(element, where) {
 }
 
 export function toggleMenu() {
-  let menu = document.querySelector(`.menu`);
-  if (!menu.classList.contains('hidden')) menu.classList.add('hidden', 'opacity-0');
-  else menu.classList.remove('hidden', 'opacity-0');
+  let menu = document.querySelector(`.menu`)
+  if (!menu.classList.contains('hidden')) menu.classList.add('hidden', 'opacity-0')
+  else menu.classList.remove('hidden', 'opacity-0')
 }
 
 export function mobileCheck() {

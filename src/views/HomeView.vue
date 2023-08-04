@@ -99,9 +99,7 @@ export default {
     class="relative w-full h-[32rem] gap-4 sm:gap-12 content -translate-y-3 opacity-0 ease-in-out duration-[1000ms] transition-all start"
   >
     <section class="absolute grid place-items-center w-full h-full">
-      <section
-        class="relative aspect-auto w-full h-full overflow-hidden"
-      >
+      <section class="relative aspect-auto w-full h-full overflow-hidden">
         <img
           :src="getImageUrl(`images/${Object.keys(photos())[0]}_1.webp`)"
           alt="Montaż pomp ciepła"
@@ -110,9 +108,7 @@ export default {
         />
       </section>
     </section>
-    <section
-      class="relative w-full h-full flex justify-end px-phone sm:px-fit"
-    >
+    <section class="relative w-full h-full flex justify-end px-phone sm:px-fit">
       <section class="flex flex-col gap-3 justify-center px-8 w-fit h-full bg-white/80">
         <h1 class="text-black font-semibold text-2xl sm:text-6xl text-left">
           Profesjonalny<br />
@@ -180,7 +176,9 @@ export default {
       >
         Swoje instalacje opieramy na systemach:
       </h2>
-      <section class="w-full h-fit grid grid-rows-2 grid-cols-3 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-8 px-2 sm:px-0 sm:pb-8 place-items-center">
+      <section
+        class="w-full h-fit grid grid-rows-2 grid-cols-3 sm:grid-rows-none sm:grid-cols-5 gap-4 sm:gap-8 px-2 sm:px-0 sm:pb-8 place-items-center"
+      >
         <aside class="w-full h-full">
           <IboLogo />
         </aside>
