@@ -129,8 +129,8 @@ export default {
     </ul>
   </nav>
   <nav
+    v-if="mobile"
     @click="toggleMenu()"
-    v-else
     class="menu fixed z-50 px-phone sm:px-fit grid grid-flow-col place-content-center sm:flex sm:flex-row sm:justify-between w-full h-screen bg-white/60 backdrop-blur-sm transition-all duration-300 ease-in-out hidden opacity-0"
   >
     <ul class="w-full grid grid-flow-row sm:flex flex-row gap-2 sm:gap-4 items-center">
@@ -168,5 +168,3 @@ export default {
     </ul>
   </nav>
 </template>
-
-<style></style>

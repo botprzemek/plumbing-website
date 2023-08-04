@@ -54,4 +54,3 @@
     <path d="M265.04,122.62h-14.51v-4.44h14.28c.06,1.26,.15,2.75,.23,4.44Z" />
   </svg>
 </template>
-<script setup></script>
