@@ -78,7 +78,7 @@ export default {
           </section>
         </section>
         <section class="w-full">
-          <section class="w-full grid grid-cols-3 sm:grid-rows-3 gap-3 sm:gap-4">
+          <section class="w-full grid grid-cols-3 sm:grid-cols-none sm:grid-rows-3 gap-3 sm:gap-4">
             <button
               class="grid place-items-center h-fit w-full px-2 sm:px-6 py-1.5 bg-blue rounded-full text-white hover:scale-105 transition-transform duration-300 ease-in-out"
             >
