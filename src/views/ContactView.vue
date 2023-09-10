@@ -35,7 +35,7 @@ export default {
             secret: '45250b48a612c23ab5f48b5aee4f1f10'
           },
           body: JSON.stringify({
-            source: 'info@botprzemek.pl',
+            source: 'biuro@panodrurek.pl',
             name: this.name,
             email: this.email,
             content: this.content
