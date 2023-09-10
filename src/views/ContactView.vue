@@ -32,7 +32,7 @@ export default {
           method: 'POST',
           mode: 'cors',
           headers: {
-            secret: '45250b48a612c23ab5f48b5aee4f1f10'
+            secret: 'your_api_secret'
           },
           body: JSON.stringify({
             source: 'biuro@panodrurek.pl',
