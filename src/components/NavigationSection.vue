@@ -68,7 +68,7 @@ export default {
     class="sticky top-0 z-30 px-phone sm:px-fit flex flex-row justify-center sm:justify-between h-16 bg-white shadow-sm"
   >
     <RouterLink v-if="path !== '/'" to="/" class="flex flex-row items-center gap-4 group">
-      <img src="../assets/images/logo.webp" class="py-2 h-full w-fit" alt="Logo Pan od Rurek" />
+      <img src="../assets/images/logo.webp" class="py-2 h-full aspect-square" alt="Logo Pan od Rurek" />
       <section>
         <span
           class="text-black font-semibold text-2xl group-hover:text-blue transition-colors duration-200 ease-in"
@@ -76,8 +76,8 @@ export default {
         >
       </section>
     </RouterLink>
-    <button v-else @click="scrollTo('header', 'start')" class="flex flex-row items-center gap-4">
-      <img src="../assets/images/logo.webp" class="py-2 h-full w-fit" alt="Logo Pan od Rurek" />
+    <button v-else @click="scrollTo('header', 'start')" class="flex flex-row items-center gap-4 py-2">
+      <img src="../assets/images/logo.webp" class="h-full aspect-square" alt="Logo Pan od Rurek" />
       <span
         class="text-black font-semibold text-2xl hover:text-blue transition-colors duration-200 ease-in"
         >Pan od Rurek</span

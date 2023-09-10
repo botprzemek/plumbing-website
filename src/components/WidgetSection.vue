@@ -7,7 +7,7 @@ import { mobileCheck, toggleMenu } from '@/methods'
 <template>
   <aside
       v-if="mobileCheck()"
-      @click="toggleMenu()" class="fixed h-screen top-0 z-40 grid place-items-start">
+      @click="toggleMenu()" class="fixed h-fit top-0 z-40 grid place-items-start">
     <button
       title="Menu"
       class="px-6 py-1.5 gap-1 bg-blue h-fit w-fit rounded-full hover:scale-105 transition-transform duration-300 ease-in-out translate-x-3 translate-y-3 shadow-sm"
